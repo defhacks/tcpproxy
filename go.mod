@@ -1,4 +1,4 @@
-module github.com/patdowney/tcpproxy
+module github.com/defhacks/tcpproxy
 
 go 1.18
 
