@@ -277,6 +277,7 @@ func (p *Proxy) Yolo() error {
 	p.mu.Lock()
 	defer p.mu.Unlock()
 	p.donec = nil
+	return nil
 }
 
 // Start creates a TCP listener for each unique ipPort from the
