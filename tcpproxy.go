@@ -272,6 +272,13 @@ func (p *Proxy) Close() error {
 	return nil
 }
 
+// XXX: you oughta look out
+func (p *Proxy) Yolo() error {
+	p.mu.Lock()
+	defer p.mu.Unlock()
+	p.donec = nil
+}
+
 // Start creates a TCP listener for each unique ipPort from the
 // previously created routes and starts the proxy. It returns any
 // error from starting listeners.
